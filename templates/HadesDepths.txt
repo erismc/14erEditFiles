@@ -1,0 +1,1 @@
+fx br s $1 0.5 if both $2 simplex 3 128 4 if noise perlin 4 110 4 set 70%magma_block;30%crimson_hyphae else set 85%crimson_hyphae;15%magma_block else if both $2 at 0 1 0 air set 85%crimson_nylium;10%nether_wart_block;5%red_concrete_powder else if $2 set netherrack 

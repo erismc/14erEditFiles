@@ -1,0 +1,1 @@
+fx br s $1 0.5 if $2 if at 0 1 0 air set 70%white_concrete;10%white_concrete_powder;15%pink_concrete_powder;5%pink_concrete else if and noise perlin 3 130 4 not noise perlin 3 110 4 set polished_diorite else if both simplex 3 128 4 $2 set bone_block else set 90%smooth_quartz;10%white_concrete_powder 

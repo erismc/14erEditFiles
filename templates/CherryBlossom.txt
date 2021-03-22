@@ -1,0 +1,1 @@
+fx br s $1 0.5 if $2 if simplex 4 100 2 set white_stained_glass;white_terracotta;white_concrete;pink_stained_glass else set pink_concrete;pink_stained_glass;pink_glazed_terracotta
