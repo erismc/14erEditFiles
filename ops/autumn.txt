@@ -1,0 +1,12 @@
+if bedrock;diamond_block;gold_block
+    if noise perlin 3 90 4
+        set 80%diorite;10%polished_diorite
+    else if noise simplex 4 70 2
+        set cobblestone
+    else if simplex 3 130 2
+        if not simplex 3 110 2
+            set gravel
+        else
+            set andesite
+    else
+        set stone

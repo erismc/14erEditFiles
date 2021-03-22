@@ -1,0 +1,2 @@
+if bedrock
+if at 0 10 0 bedrock if simplex 4 190 4 set prismarine else set dirt

@@ -1,0 +1,11 @@
+if diamond_block;bedrock 
+if at 0 1 0 air set snow_block else 
+if at 0 2 0 air set 70%snow_block;30%diorite else 
+if at 0 3 0 air set 20%diorite;80%snow_block else 
+if at 0 1 0 spruce_wood set spruce_wood;diorite else 
+if at 0 2 0 spruce_wood set 20%spruce_wood;10%polished_diorite;70%diorite else
+if noise value 3 100 4 if simplex 3 60 4 set blue_ice else 
+if noise value 3 70 4 if noise perlin 3 128 4 set packed_ice else 
+set 50%diorite;35%andesite;5%polished_andesite;10%polished_diorite else
+set 80%diorite;10%andesite;10%polished_diorite else
+set 80%diorite;10%andesite;10%polished_diorite 

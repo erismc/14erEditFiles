@@ -1,0 +1,1 @@
+if stone if simplex 4 128 6 set 85%dead_brain_coral_block;15%gravel else set mossy_cobblestone;cobblestone;stone else if stone_bricks set 70%stone_bricks;10%cracked_stone_bricks;10%mossy_stone_bricks;10%andesite else if sponge if simplex 4 100 4 set smithing_table else set note_block else if stone_brick_wall set 70%stone_brick_wall;20%mossy_stone_brick_wall;10%cobblestone_wall

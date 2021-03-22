@@ -1,0 +1,9 @@
+if bedrock;diamond_block
+if at 0 1 0 air 
+if simplex 3 100 4 set grass_block 
+else set red_sand
+else if noise simplex 4 128 4 
+if noise value 3 100 4 set terracotta 
+else set smooth_red_sandstone 
+else if noise value 3 100 4 set 85%granite;15%polished_granite 
+else set orange_terracotta

@@ -1,0 +1,10 @@
+if bedrock;diamond_block;gold_block;sponge
+    else if noise simplex 4 70 2
+        set cobblestone
+    else if simplex 3 130 2
+        if not simplex 3 110 2
+            set gravel
+        else
+            set andesite
+    else
+        set stone
