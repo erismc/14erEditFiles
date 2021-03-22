@@ -1,0 +1,12 @@
+s $1 0.5 if both air at 0 -1 0 $2 set white_concrete
+
+s $1 0.5 if both white_concrete at 0 -1 0 $2 if at 1 0 0 $2 set orange_concrete else if at -1 0 0 $2 set orange_concrete else if at 0 0 1 $2 set orange_concrete else if at 0 0 -1 $2 set orange_concrete
+s $1 0.5 if both white_concrete at 0 -1 0 $2 if at 1 0 0 orange_concrete set magenta_concrete else if at -1 0 0 orange_concrete set magenta_concrete else if at 0 0 1 orange_concrete set magenta_concrete else if at 0 0 -1 orange_concrete set magenta_concrete
+s $1 0.5 if both white_concrete at 0 -1 0 $2 if at 1 0 0 magenta_concrete set yellow_concrete else if at -1 0 0 magenta_concrete set yellow_concrete else if at 0 0 1 magenta_concrete set yellow_concrete else if at 0 0 -1 magenta_concrete set yellow_concrete
+s $1 0.5 if both white_concrete at 0 -1 0 $2 if at 1 0 0 yellow_concrete set lime_concrete else if at -1 0 0 yellow_concrete set lime_concrete else if at 0 0 1 yellow_concrete set lime_concrete else if at 0 0 -1 yellow_concrete set lime_concrete
+
+s $1 0.5 if orange_concrete set snow[layers=6]
+s $1 0.5 if magenta_concrete set 80%snow[layers=4];20%snow[layers=6]
+s $1 0.5 if yellow_concrete set 80%snow[layers=3];20%snow[layers=4]
+s $1 0.5 if lime_concrete set 80%snow[layers=2];20%snow[layers=3]
+s $1 0.5 if #concrete set 90%snow;10%snow[layers=2]

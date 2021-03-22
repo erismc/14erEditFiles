@@ -1,0 +1,10 @@
+s $1 0.5 if $2 if simplex 4 128 3 set white_concrete else if simplex 2 128 2 set black_concrete else set red_concrete
+s $1 0.5 if both white_concrete at 0 1 0 air set air
+s $1 0.5 if both air at 0 -1 0 red_concrete set yellow_concrete
+s $1 0.5 if both white_concrete at 0 1 0 air set sponge
+s $1 0.5 if red_concrete set stone
+s $1 0.5 if #concrete set $2
+s $1 0.5 if sponge if noise perlin 2 128 6 set water else set $2
+s $1 0.5 if $2 if noise perlin 3 128 4 set dirt else if noise simplex 2 150 6 set coarse_dirt else set soul_sand
+s $1 0.5 if both air at 0 -1 0 dirt or coarse_dirt if noise perlin 2 128 4 set 60%air;30%grass;10%fern 
+s $1 0.5 if both air at 0 -1 0 grass if % 20 / at 0 -1 0 set tall_grass[half=lower] set tall_grass[half=upper] 

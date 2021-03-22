@@ -1,0 +1,13 @@
+cyl 12 7 y 0.15 if $1 if noise simplex 3 50 4 set packed_ice else if noise perlin 3 80 4 set stone 
+cyl 12 7 y 0.15 if stone if both adjacent range 5 5 stone at 0 1 0 air at 0 1 0 set cobblestone
+cyl 12 7 y 0.15 if cobblestone set stone
+cyl 12 7 y 0.15 if both air at 0 -1 0 stone set 80%air;7%dead_brain_coral[waterlogged=false];5%grass;2%tall_grass[half=lower] else if air if both at 0 -1 0 tall_grass at 0 -2 0 stone set tall_grass[half=upper]
+
+cyl 10 7 y 0.15 if both $1 at 0 1 0 air set 99%$1;3%sponge
+cyl 12 7 y 0.15 if sponge set 1%$1;5%white_concrete;5%orange_concrete;5%magenta_concrete;5%light_blue_concrete;5%yellow_concrete;5%lime_concrete;5%pink_concrete;5%gray_concrete
+cyl 12 7 y 0.15 if white_concrete at 0 1 0 macro schem{spruce_10;-8;-2;-8;false;tp} else if orange_concrete at 0 1 0 macro schem{spruce_9;-8;-2;-8;false;tp} else if magenta_concrete at 0 1 0 macro schem{spruce_3;-8;-2;-8;false;tp} else if light_blue_concrete at 0 1 0 macro schem{spruce_4;-8;-2;-8;false;tp} else if yellow_concrete at 0 1 0 macro schem{spruce_5;-8;-2;-8;false;tp} else if lime_concrete at 0 1 0 macro schem{spruce_6;-8;-2;-8;false;tp} else if pink_concrete at 0 1 0 macro schem{spruce_7;-8;-2;-8;false;tp} else if gray_concrete at 0 1 0 macro schem{spruce_8;-8;-2;-8;false;tp} else if white_wool at 0 1 0 macro schem{spruce_1;-8;-2;-8;false;xz} else if orange_wool at 0 1 0 macro schem{spruce_2;-8;-2;-8;false;xz} else if magenta_wool at 0 1 0 macro schem{spruce_3;-8;-2;-8;false;xz} else if light_blue_wool at 0 1 0 macro schem{spruce_4;-8;-2;-8;false;xz} else if yellow_wool at 0 1 0 macro schem{spruce_5;-8;-2;-8;false;xz} else if lime_wool at 0 1 0 macro schem{spruce_6;-8;-2;-8;false;xz} else if pink_wool at 0 1 0 macro schem{spruce_7;-8;-2;-8;false;xz} else if gray_wool at 0 1 0 macro schem{spruce_8;-8;-2;-8;false;xz} 
+
+
+cyl 12 7 y 0.15 if $1 if both at 0 1 0 not sky 7 at 0 1 0 air set podzol else if both at 0 1 0 sky 15 at 0 1 0 air set snow_block else if both at 0 2 0 sky 15 at 0 2 0 air set snow_block;diorite else if both at 0 1 0 not sky 11 at 0 1 0 air set 70%podzol;30%snow_block else if both at 0 1 0 sky 11 at 0 1 0 air set 80%snow_block;20%podzol else if at 0 1 0 spruce_wood set spruce_wood;diorite else if at 0 2 0 spruce_wood set 20%spruce_wood;10%polished_diorite;70%diorite else set 80%diorite;10%andesite;10%polished_diorite
+cyl 12 7 y 0.15 if #concrete set $1
+cyl 12 3 y 0.5 if air if at 0 1 0 spruce_wood set spruce_wood

@@ -1,0 +1,4 @@
+s $1 0.5 if $2 if simplex 4 128 3 set white_concrete else if simplex 2 128 2 set black_concrete else set red_concrete
+s $1 0.5 if both white_concrete at 0 1 0 air set air
+s $1 0.5 if both air at 0 -1 0 red_concrete set yellow_concrete
+s $1 0.5 if #concrete set $2

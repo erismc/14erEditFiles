@@ -1,0 +1,8 @@
+re 4 6 17 23 4 6 0.01 if air;jungle_fence;iron_bars set white_concrete
+cyl 7 25 y 0.15 at 0 5 0 if white_concrete if both exposed 5 at 0 1 0 air set 80%jungle_fence;20%air
+cyl 7 25 y 0.15 at 0 5 0 if both air at 0 -1 0 jungle_fence set 40%jungle_fence;25%iron_bars;35%air
+cyl 7 25 y 0.15 at 0 5 0 if both air at 0 -1 0 iron_bars set 30%iron_bars;70%air
+cyl 7 25 y 0.15 at 0 5 0 if white_concrete if both adjacent range 3 4 air at 0 1 0 air set 30%red_concrete;60%air;10%jungle_fence
+cyl 7 25 y 0.15 at 0 5 0 if white_concrete if both adjacent range 3 4 air at 0 1 0 air set 30%red_concrete;50%air;20%jungle_fence
+cyl 7 25 y 0.15 at 0 5 0 if white_concrete if both adjacent range 3 4 air at 0 1 0 air set 30%red_concrete;40%air;30%jungle_fence
+cyl 7 25 y 0.15 at 0 5 0 if both air at 0 -1 0 jungle_fence set 15%jungle_fence;5%iron_bars;80%air

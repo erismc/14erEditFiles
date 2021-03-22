@@ -1,0 +1,9 @@
+cyl 12 7 y 0.15 if $1 if noise simplex 3 50 4 set packed_ice else if noise perlin 3 80 4 set stone 
+cyl 12 7 y 0.15 if stone if both adjacent range 5 5 stone at 0 1 0 air at 0 1 0 set cobblestone
+cyl 12 7 y 0.15 if cobblestone set stone
+cyl 12 7 y 0.15 if both air at 0 -1 0 stone if % 15 set 7%dead_brain_coral[waterlogged=false];5%grass
+
+
+cyl 12 7 y 0.15 if $1 if both at 0 1 0 not sky 7 at 0 1 0 air set podzol else if both at 0 1 0 sky 15 at 0 1 0 air set snow_block else if both at 0 2 0 sky 15 at 0 2 0 air set snow_block;diorite else if both at 0 1 0 not sky 11 at 0 1 0 air set 70%podzol;30%snow_block else if both at 0 1 0 sky 11 at 0 1 0 air set 80%snow_block;20%podzol else if at 0 1 0 spruce_wood set spruce_wood;diorite else if at 0 2 0 spruce_wood set 20%spruce_wood;10%polished_diorite;70%diorite else set 80%diorite;10%andesite;10%polished_diorite
+cyl 12 7 y 0.15 if #concrete set $1
+cyl 12 3 y 0.5 if air if at 0 1 0 spruce_wood set spruce_wood

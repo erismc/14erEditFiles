@@ -1,0 +1,16 @@
+cyl $1 5 y 0.15 if $2 if simplex 4 128 3 set white_concrete else if simplex 2 128 2 set black_concrete else set red_concrete
+cyl $1 5 y 0.15 if both white_concrete at 0 -1 0 air set sponge
+cyl $1 5 y 0.15 if both air at 0 1 0 red_concrete set yellow_concrete
+cyl $1 5 y 0.15 if red_concrete set cobblestone
+cyl $1 5 y 0.15 if sponge set air
+cyl $1 5 y 0.15 if #concrete set bricks
+cyl $1 5 y 0.15 if both bricks at 0 -1 0 air set 75%bricks;1%sponge
+cyl $1 5 y 0.15 if sponge br re 1 2 5 10 1 2 0.5 if air set stone
+cyl $1 13 y 0.15 if stone if exposed 6 set air
+cyl $1 13 y 0.15 if stone if both exposed 5 at 0 -1 0 air set andesite_wall
+cyl $1 13 y 0.15 if both air at 0 1 0 andesite_wall set 40%andesite_wall;25%iron_bars;35%air
+cyl $1 13 y 0.15 if both air at 0 1 0 iron_bars set 30%iron_bars;70%air
+cyl $1 13 y 0.15 if stone if both exposed 4 at 0 -1 0 air set 60%stone;20%air;20%andesite_wall
+cyl $1 5 y 0.15 if bricks if noise perlin 3 128 4 set stone else if noise simplex 2 170 6 set andesite else set blackstone
+cyl $1 5 y 0.15 if both air at 0 1 0 stone;andesite if noise perlin 2 70 4 set sponge else if noise simplex 2 70 4 set cobblestone_slab 
+cyl $1 5 y 0.15 if sponge set stone

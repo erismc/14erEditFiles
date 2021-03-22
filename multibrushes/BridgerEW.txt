@@ -1,0 +1,15 @@
+s $1 0.5 if purple_concrete at 0 0 1 if air set jungle_slab[type=top]
+s $1 0.5 if purple_concrete at 0 0 -1 if air set jungle_slab[type=top]
+
+s $1 0.5 if both jungle_slab at 0 -1 0 jungle_slab set jungle_planks
+
+s $1 0.5 if air if both at 0 -1 0 purple_concrete at 1 0 0 purple_concrete set jungle_slab[type=bottom]
+s $1 0.5 if air if both at 0 -1 0 jungle_slab[type=top] at 0 0 1 jungle_slab[type=bottom] set jungle_slab[type=bottom]
+s $1 0.5 if air if both at 0 -1 0 jungle_slab[type=top] at 0 0 -1 jungle_slab[type=bottom] set jungle_slab[type=bottom]
+
+s $1 0.5 if air if both at 0 -1 0 purple_concrete at -1 0 0 purple_concrete set jungle_slab[type=bottom]
+s $1 0.5 if air if both at 0 -1 0 jungle_slab[type=top] at 0 0 1 jungle_slab[type=bottom] set jungle_slab[type=bottom]
+s $1 0.5 if air if both at 0 -1 0 jungle_slab[type=top] at 0 0 -1 jungle_slab[type=bottom] set jungle_slab[type=bottom]
+
+s $1 0.5 if both jungle_slab at 0 1 0 jungle_planks set air
+s $1 0.5 if purple_concrete set jungle_wood

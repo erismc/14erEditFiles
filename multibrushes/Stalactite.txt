@@ -1,0 +1,6 @@
+v br re 1 2 5 10 1 2 0.5 if air set stone
+cyl 2 12 y 0.15 at 0 -5 0 if stone if exposed 6 set air
+cyl 2 12 y 0.15 at 0 -5 0 if stone if both exposed 5 at 0 1 0 air set andesite_wall
+cyl 2 12 y 0.15 at 0 -5 0 if both air at 0 1 0 andesite_wall set 40%andesite_wall;25%iron_bars;35%air
+cyl 2 12 y 0.15 at 0 -5 0 if both air at 0 1 0 iron_bars set 30%iron_bars;70%air
+cyl 2 12 y 0.15 at 0 -5 0 if stone if both exposed 4 at 0 -1 0 air set 60%stone;20%air;20%andesite_wall

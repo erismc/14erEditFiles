@@ -1,0 +1,2 @@
+s $1 0.5 if both air at 0 -1 0 $2 set 69%air;29%grass;2%lily_of_the_valley
+s $1 0.5 if both air at 0 -1 0 grass_block set 69%air;29%grass;2%lily_of_the_valley

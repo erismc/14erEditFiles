@@ -1,0 +1,6 @@
+cyl $1 3 y 0.15 if both $2 at 0 1 0 air #a ## cubic 3 120 4 -60 12 set gold_block
+cyl $1 6 y 0.15 if $2 set air
+cyl $1 6 y 0.15 if gold_block _ - 1 7 if air set gold_block
+cyl $1 7 y 0.15 at 0 5 0 if stone if both exposed 5 at 0 1 0 air set air
+v macro erode{$1;melt;smooth}
+cyl $1 10 y 0.15 if gold_block set $2

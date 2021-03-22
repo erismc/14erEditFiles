@@ -1,0 +1,35 @@
+e 11 1 11 0.15 if $1 #a ## simplex 3 50 4 -60 10 set diamond_block
+e 11 1 11 0.15 if $1 if ## value 2 70 6 #a ## value 3 140 4 -60 20 set emerald_block
+e 11 1 11 0.15 if $1 #a ## perlin 3 120 4 -60 3 set gold_block
+
+cyl 15 6 y 0.15 if diamond_block ^ - 1 7 if $1 set air
+cyl 15 6 y 0.15 if emerald_block ^ - 1 7 if $1 set air
+cyl 15 6 y 0.15 if gold_block ^ - 1 7 if $1 set air
+
+cyl 15 6 y 0.15 if emerald_block _ - 1 5 if air set redstone_block
+cyl 15 6 y 0.15 if gold_block _ - 1 10 if air set gold_block
+cyl 15 6 y 0.15 if diamond_block _ - 1 10 if air set diamond_block
+e 11 4 11 0.15 if $1 set gold_block
+
+v at 0 5 0 macro erode{10;melt;smooth}
+
+cyl 7 6 y 0.15 if both gold_block at 0 1 0 air if simplex 2 80 4 set 85%magma_block;5%lava;10%gold_block
+cyl 7 6 y 0.15 if gold_block if at 0 1 0 air if exposed 1 if simplex 4 100 4 set 90%lava;10%magma_block
+cyl 7 6 y 0.15 if both magma_block at 0 1 0 air at 0 1 0 set 50%fire;50%air
+cyl 15 6 y 0.15 if gold_block set netherrack
+
+cyl 15 7 y 0.15 if diamond_block if at 0 1 0 air set warped_nylium else if simplex 2 180 2 set netherrack else set nether_wart_block
+cyl 5 5 y 0.15 if warped_nylium set 97%warped_nylium;1%white_concrete;1%orange_concrete;1%magenta_concrete
+cyl 5 5 y 0.15 if white_concrete at 0 1 0 macro schem{birch_3;-8;0;-8;false;tp} else if orange_concrete at 0 1 0 macro schem{birch_1;-8;0;-8;false;tp} else if magenta_concrete at 0 1 0 macro schem{birch_2;-8;0;-8;false;tp}
+cyl 5 5 y 0.15 if #concrete set netherrack
+cyl 15 7 y 0.15 at 0 5 0 if birch_wood set warped_hyphae else if birch_leaves set warped_wart_block
+cyl 15 7 y 0.15 if both air at 0 -1 0 warped_nylium set 65%air;15%warped_roots;5%warped_fungus;10%nether_sprouts;5%twisting_vines_plant
+cyl 15 7 y 0.15 if both air at 0 -1 0 twisting_vines_plant set 70%twisting_vines_plant;30%air
+cyl 15 7 y 0.15 if both air at 0 -1 0 twisting_vines_plant set twisting_vines
+
+cyl 15 6 y 0.15 if redstone_block if at 0 1 0 emerald_block set 20%redstone_block;80%emerald_block else if at 0 2 0 emerald_block set 50%redstone_block;50%emerald_block
+cyl 17 6 y 0.15 if emerald_block set blackstone else if redstone_block if simplex 2 128 4 set basalt else set polished_basalt
+
+cyl 15 6 y 0.15 if lava if at 1 0 0 air if at 1 -1 0 not lava set netherrack else if at -1 0 0 air if at -1 -1 0 not lava set netherrack else if at 0 0 1 air if at 0 -1 1 not lava set netherrack else if at 0 0 -1 air if at 0 -1 -1 not lava set netherrack
+cyl 11 6 y 0.15 if both air at 0 -1 0 netherrack set 97%air;3%fire
+
