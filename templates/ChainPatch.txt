@@ -1,0 +1,7 @@
+fx br s $1 0.5 if and air at 0 1 0 $2 
+if % $3 
+/ / / 
+if % 33 _ - 0 0 if air set chain 
+if % 29 _ - 0 1 if air set chain 
+if % 25 _ - 0 2 if air set chain 
+if % 20 _ - 0 3 if air set chain
